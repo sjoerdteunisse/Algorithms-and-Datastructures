@@ -1,0 +1,9 @@
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\bin\Debug\netstandard2.0\ADS.Core.deps.json
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\bin\Debug\netstandard2.0\ADS.Core.dll
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\bin\Debug\netstandard2.0\ADS.Core.pdb
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\obj\Debug\netstandard2.0\ADS.Core.csprojAssemblyReference.cache
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\obj\Debug\netstandard2.0\ADS.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\obj\Debug\netstandard2.0\ADS.Core.AssemblyInfoInputs.cache
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\obj\Debug\netstandard2.0\ADS.Core.AssemblyInfo.cs
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\obj\Debug\netstandard2.0\ADS.Core.dll
+C:\Users\Sjoerd\source\repos\ADS\ADS.Core\obj\Debug\netstandard2.0\ADS.Core.pdb

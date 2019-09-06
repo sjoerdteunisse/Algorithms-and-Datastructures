@@ -1,0 +1,10 @@
+C:\Users\Sjoerd\source\repos\ADS\ADS\bin\Debug\ADS.exe.config
+C:\Users\Sjoerd\source\repos\ADS\ADS\bin\Debug\ADS.exe
+C:\Users\Sjoerd\source\repos\ADS\ADS\bin\Debug\ADS.pdb
+C:\Users\Sjoerd\source\repos\ADS\ADS\bin\Debug\ADS.Core.dll
+C:\Users\Sjoerd\source\repos\ADS\ADS\bin\Debug\ADS.Core.pdb
+C:\Users\Sjoerd\source\repos\ADS\ADS\obj\Debug\ADS.csprojAssemblyReference.cache
+C:\Users\Sjoerd\source\repos\ADS\ADS\obj\Debug\ADS.csproj.CoreCompileInputs.cache
+C:\Users\Sjoerd\source\repos\ADS\ADS\obj\Debug\ADS.csproj.CopyComplete
+C:\Users\Sjoerd\source\repos\ADS\ADS\obj\Debug\ADS.exe
+C:\Users\Sjoerd\source\repos\ADS\ADS\obj\Debug\ADS.pdb
