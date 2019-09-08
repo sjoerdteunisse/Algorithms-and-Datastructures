@@ -1,1 +1,1 @@
-# Algorithms-and-Datastructures excersices, excersices provided by Avans hogeschool
+# Algorithms-and-Datastructures excersices
