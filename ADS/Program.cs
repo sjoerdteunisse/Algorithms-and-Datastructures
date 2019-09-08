@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-//using ADS.Core.Lesson_1;
+﻿//using ADS.Core.Lesson_1;
 using ADS.Core.Lesson_2;
+using ADS.Core.Lesson_3;
+using System;
+using System.Collections.Generic;
 
 namespace ADS
 {
@@ -16,7 +16,7 @@ namespace ADS
             char endPeg = 'C'; // end tower in output
             char tempPeg = 'B'; // temporary tower in output
             int totalDisks = 1200; // number of disks
-            TowersOfHanoi.Solve(totalDisks, startPeg, endPeg, tempPeg);
+            //TowersOfHanoi.Solve(totalDisks, startPeg, endPeg, tempPeg);
 
             //var bucketSort = new BucketSort();
             //bucketSort.Execute(new[] { 8, 2, 122, 1, 99, 3, 4, 2 });
@@ -61,6 +61,16 @@ namespace ADS
 
             // Console.WriteLine(ReverseString.ExecuteV1("ban"));
             // Console.WriteLine(ReverseString.Execute("ban"));
+
+            ArrayCombiner arrayCombiner = new ArrayCombiner();
+           var x = arrayCombiner.Execute(new int[] { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 },
+                new int[] { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 });
+
+           ArrayListCombiner arrayListCombiner = new ArrayListCombiner();
+
+            var y = arrayListCombiner.Merge(new List<int> { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 },
+               new List<int> { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 });
+
 
             Console.WriteLine(Converter.BinToDecimal("1011"));
             Console.ReadLine();
