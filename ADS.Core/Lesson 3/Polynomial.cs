@@ -32,15 +32,10 @@ namespace ADS.Core.Lesson_3
         {
             var result = new Polynomial();
 
-            //Order by coeficient
-            poly2._terms = poly2._terms.OrderBy(xx => xx.getCoefficient()).ToList();
-            //Order by exponent
-            poly2._terms = poly2._terms.OrderBy(xx => xx.getExponent()).ToList();
-
-            //Order by coeficient
-            _terms = _terms.OrderBy(xx => xx.getCoefficient()).ToList();
-            //Order by expontent
-            _terms = _terms.OrderBy(xx => xx.getExponent()).ToList();
+            //Order by coeficient & exponent
+            poly2._terms = poly2._terms.OrderBy(xx => xx.getCoefficient()).ToList().OrderBy(xx=> xx.getExponent()).ToList();
+            //Order by coeficient & expontent
+            _terms = _terms.OrderBy(xx => xx.getCoefficient()).ToList().OrderBy(xx => xx.getExponent()).ToList();
           
             while (_terms.Count > 0 || poly2._terms.Count > 0)
             {

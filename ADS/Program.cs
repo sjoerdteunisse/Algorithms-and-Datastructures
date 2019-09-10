@@ -87,22 +87,38 @@ namespace ADS
             polynomial2.Add(new Term(-5, 0));
 
             
-            
-
             //-> coeff = 1 - X^ > ex3
             //2X^3
             //-5^0
 
             // Determine the sum
-            Polynomial sumpolynomial = polynomial1.Sum(polynomial2);
-            var terms = sumpolynomial.GetAllTerms();
+            Polynomial polynomialSum = polynomial1.Sum(polynomial2);
+            var terms = polynomialSum.GetAllTerms();
 
-            for (int i = 0; i < sumpolynomial.GetAllTerms().Count; i++)
+            for (int i = 0; i < polynomialSum.GetAllTerms().Count; i++)
             {
                 Console.Write($"{terms[i].toString()}\t");
 
             }
             Console.WriteLine();
+
+
+            Hangman hangman = new Hangman();
+            hangman.ChooseWord();
+
+            bool val = true;
+            while (val)
+            {
+                string input = Console.ReadLine();
+                hangman.GuessWord(input);
+
+                if (input == "exit")
+                {
+                    val = false;
+                }
+
+            }
+
 
             //Console.WriteLine(Converter.BinToDecimal("1011"));
             Console.ReadLine();
