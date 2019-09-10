@@ -16,7 +16,7 @@ namespace ADS
             char endPeg = 'C'; // end tower in output
             char tempPeg = 'B'; // temporary tower in output
             int totalDisks = 1200; // number of disks
-            //TowersOfHanoi.Solve(totalDisks, startPeg, endPeg, tempPeg);
+                                   //TowersOfHanoi.Solve(totalDisks, startPeg, endPeg, tempPeg);
 
             //var bucketSort = new BucketSort();
             //bucketSort.Execute(new[] { 8, 2, 122, 1, 99, 3, 4, 2 });
@@ -62,17 +62,49 @@ namespace ADS
             // Console.WriteLine(ReverseString.ExecuteV1("ban"));
             // Console.WriteLine(ReverseString.Execute("ban"));
 
-            ArrayCombiner arrayCombiner = new ArrayCombiner();
-           var x = arrayCombiner.Execute(new int[] { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 },
-                new int[] { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 });
+            // ArrayCombiner arrayCombiner = new ArrayCombiner();
+            //var x = arrayCombiner.Execute(new int[] { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 },
+            //     new int[] { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 });
 
-           ArrayListCombiner arrayListCombiner = new ArrayListCombiner();
+            //ArrayListCombiner arrayListCombiner = new ArrayListCombiner();
 
-            var y = arrayListCombiner.Merge(new List<int> { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 },
-               new List<int> { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 });
+            // var y = arrayListCombiner.Merge(new List<int> { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 },
+            //    new List<int> { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 });
 
 
-            Console.WriteLine(Converter.BinToDecimal("1011"));
+            // Create first polynomial
+            var polynomial1 = new Polynomial();
+            polynomial1.Add(new Term(-1, 2));
+            polynomial1.Add(new Term(-3, 1));
+            polynomial1.Add(new Term(-1, 0));
+            polynomial1.Add(new Term(5, 5));
+
+
+            // Create second polynomial
+            var polynomial2 = new Polynomial();
+            polynomial2.Add(new Term(1, 3));
+            polynomial2.Add(new Term(2, 2));
+            polynomial2.Add(new Term(-5, 0));
+
+            
+            
+
+            //-> coeff = 1 - X^ > ex3
+            //2X^3
+            //-5^0
+
+            // Determine the sum
+            Polynomial sumpolynomial = polynomial1.Sum(polynomial2);
+            var terms = sumpolynomial.GetAllTerms();
+
+            for (int i = 0; i < sumpolynomial.GetAllTerms().Count; i++)
+            {
+                Console.Write($"{terms[i].toString()}\t");
+
+            }
+            Console.WriteLine();
+
+            //Console.WriteLine(Converter.BinToDecimal("1011"));
             Console.ReadLine();
         }
     }
