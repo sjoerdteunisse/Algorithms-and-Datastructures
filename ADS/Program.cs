@@ -86,10 +86,15 @@ namespace ADS
             polynomial2.Add(new Term(2, 2));
             polynomial2.Add(new Term(-5, 0));
 
-            
+           //TowersOfHanoi.Solve(64);
+            //TowersOfHanoi.TowerHanoi(3);
             //-> coeff = 1 - X^ > ex3
             //2X^3
             //-5^0
+
+            //var c = BinarySearch.binarySearchFloris(new int[] { 1,2,3,4,5,6,7,8,9,10 }, 2);
+
+            int max = MaxRec.Execute(new int[]{1,2,3,4,1204});
 
             // Determine the sum
             Polynomial polynomialSum = polynomial1.Sum(polynomial2);

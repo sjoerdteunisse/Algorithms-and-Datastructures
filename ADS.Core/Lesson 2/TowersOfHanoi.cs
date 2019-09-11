@@ -39,14 +39,29 @@ namespace ADS.Core.Lesson_2
         //STACK:
         //INPUT: disks = 3, start= a, end = c, temp = b
 
-        public static void Solve(int disks, char startPeg, char endPeg, char tempPeg)
+        public static void Solve(int disks, char startPeg = 'A', char endPeg = 'C', char tempPeg = 'B')
         {
-            if (disks > 0)
+            if (disks == 0)
             {
-                Solve(disks - 1, startPeg, tempPeg, endPeg);
-                Console.WriteLine("Move disk from " + startPeg + ' ' + endPeg);
-                Solve(disks - 1, tempPeg, endPeg, startPeg);
+                return;
             }
+
+            Solve(disks - 1, startPeg, tempPeg, endPeg);
+           // Console.WriteLine("Move disk from " + startPeg + ' ' + endPeg);
+            Solve(disks - 1, tempPeg, endPeg, startPeg);
+        }
+
+        public static void TowerHanoi(int schijven, string torenStart = "A", string torenEind = "C", string torenTussen = "B")
+        {
+            if (schijven == 0)
+            {
+                return;
+            }
+
+            TowerHanoi(schijven - 1, torenStart, torenTussen, torenEind);
+            Console.WriteLine("verplaats schijf " + (schijven - 1).ToString() + " Verplaats schijf van " + torenStart + " naar " + torenEind);
+            TowerHanoi(schijven - 1, torenTussen, torenEind, torenStart);
+
         }
     }
 }

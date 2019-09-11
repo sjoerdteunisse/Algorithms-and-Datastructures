@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
 
 namespace ADS.Core.Lesson_3
 {
@@ -68,6 +68,3 @@ namespace ADS.Core.Lesson_3
         }
     }
 }
-
-
-

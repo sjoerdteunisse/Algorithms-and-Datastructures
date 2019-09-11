@@ -3,17 +3,7 @@
     public class ReverseString
     {
 
-        //Time complexity O(1), space O(n)
-        public static string ExecuteV1(string input)
-        {
-            //Exit mechanism
-            if (input.Length <= 1)
-                return input;
-
-            //Recall with string -1 length to pointer on stack.
-            //And Add the first char as return value on the stack
-            return ExecuteV1(input.Substring(1)) + input[0];
-        }
+       
 
         //public static string ReverseString(string input)
         //{
@@ -29,6 +19,18 @@
                 return input[input.Length - 1] + Execute(input.Substring(0, input.Length - 1));
 
             return input;
+        }
+
+        //Time complexity O(1), space O(n)
+        public static string ExecuteV1(string input)
+        {
+            //Exit mechanism
+            if (input.Length <= 1)
+                return input;
+
+            //Recall with string -1 length to pointer on stack.
+            //And Add the first char as return value on the stack
+            return ExecuteV1(input.Substring(1)) + input[0];
         }
     }
 }

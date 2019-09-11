@@ -1,4 +1,7 @@
-﻿namespace ADS.Core.Lesson_2
+﻿using System;
+using System.Linq;
+
+namespace ADS.Core.Lesson_2
 {
     /// <summary>
     /// Binary search expects that the array is sorted
@@ -73,6 +76,17 @@
             }
 
             return -1;
+        }
+
+        public int binarySearch(int[] sortedIntArray, int n, int arrMin = 0, int arrMax = 0)
+        {
+            int mid = (arrMin == 0 && arrMax == 0 ? (sortedIntArray.Length - 1) / 2 : (arrMin + arrMax) / 2);
+
+            if (n > sortedIntArray[mid])
+                return binarySearch(sortedIntArray, n, mid + 1, mid * 2 + 1);
+            if (n < sortedIntArray[mid])
+                return binarySearch(sortedIntArray, n, arrMin, mid);
+            return mid;
         }
     }
 }
