@@ -2,7 +2,9 @@
 using ADS.Core.Lesson_2;
 using ADS.Core.Lesson_3;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace ADS
 {
@@ -74,27 +76,32 @@ namespace ADS
 
             // Create first polynomial
             var polynomial1 = new Polynomial();
-            polynomial1.Add(new Term(-1, 2));
-            polynomial1.Add(new Term(-3, 1));
-            polynomial1.Add(new Term(-1, 0));
-            polynomial1.Add(new Term(5, 5));
+            polynomial1.Add(new Term(1, 2));
+            polynomial1.Add(new Term(2, 2));
+            polynomial1.Add(new Term(3, 0));
 
 
             // Create second polynomial
             var polynomial2 = new Polynomial();
-            polynomial2.Add(new Term(1, 3));
-            polynomial2.Add(new Term(2, 2));
-            polynomial2.Add(new Term(-5, 0));
+            polynomial2.Add(new Term(-1, 3));
+            polynomial2.Add(new Term(1, 1));
+            polynomial2.Add(new Term(1, 2));
 
-           //TowersOfHanoi.Solve(64);
-            //TowersOfHanoi.TowerHanoi(3);
-            //-> coeff = 1 - X^ > ex3
-            //2X^3
-            //-5^0
+            Stopwatch x = new Stopwatch();
+            x.Start();
+            Polynomial polyX = polynomial1.SumWorking(polynomial2);
+            var termsWorking = polyX.GetAllTerms();
+            x.Stop();
+            Console.WriteLine(x.ElapsedTicks + "TICKS");
+            x.Reset();
 
-            //var c = BinarySearch.binarySearchFloris(new int[] { 1,2,3,4,5,6,7,8,9,10 }, 2);
+            x.Start();
 
-            int max = MaxRec.Execute(new int[]{1,2,3,4,1204});
+            Polynomial polyOptimized = polynomial1.OptimizedAlgorithm(polynomial2);
+            var optimzedTerms = polyX.GetAllTerms();
+            x.Stop();
+            Console.WriteLine(x.ElapsedTicks + "TICKS");
+            x.Reset();
 
             // Determine the sum
             Polynomial polynomialSum = polynomial1.Sum(polynomial2);
@@ -105,8 +112,14 @@ namespace ADS
                 Console.Write($"{terms[i].toString()}\t");
 
             }
-            Console.WriteLine();
 
+            //TowersOfHanoi.Solve(64);
+            //TowersOfHanoi.TowerHanoi(3);
+            //-> coeff = 1 - X^ > ex3
+            //2X^3
+            //-5^0
+
+            //var c = BinarySearch.binarySearchFloris(new int[] { 1,2,3,4,5,6,7,8,9,10 }, 2);
 
             Hangman hangman = new Hangman();
             hangman.ChooseWord();
@@ -124,6 +137,20 @@ namespace ADS
 
             }
 
+            int[] arr1 = new int[] { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
+            int[] arr2 = new int[] { 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 };
+
+            int[] execute = ArrayCombiner.combineArray(arr2, arr1);
+
+            //var intList = new ArrayList();
+            //intList[1] as int? = 2;
+
+            var res12 = ArrayListCombiner.Merge(new ArrayList() {1, 2, 3, 4}, new ArrayList() {1, 2, 3, 4});
+
+            int max = MaxRec.Execute(new int[]{1,2,3,4,1204});
+
+          
+            Console.WriteLine();
 
             //Console.WriteLine(Converter.BinToDecimal("1011"));
             Console.ReadLine();

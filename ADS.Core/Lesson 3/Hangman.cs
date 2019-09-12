@@ -7,10 +7,10 @@ namespace ADS.Core.Lesson_3
     public class Hangman
     {
         private Random _rnd;
-        private StreamReader _file;
-        private List<string> _lines;
         private int _wordCount;
         private int _guessWordPos;
+        private StreamReader _file;
+        private List<string> _lines;
 
         public Hangman()
         {
@@ -40,7 +40,7 @@ namespace ADS.Core.Lesson_3
             if (_lines.Count > 0)
             {
                 _guessWordPos = _rnd.Next(0, _wordCount);
-                //Console.WriteLine(_lines[_guessWordPos]);
+                Console.WriteLine(_lines[_guessWordPos]);
             }
             else
             {
