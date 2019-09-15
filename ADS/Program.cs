@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using ADS.Core.Recusrion;
 
 namespace ADS
 {
@@ -12,6 +13,15 @@ namespace ADS
     {
         static void Main(string[] args)
         {
+            //Printer.PrintAsc();
+            //Console.WriteLine(NaturalCounter.Execute(5));
+            //DigitSeperator.Execute(255);
+            //Console.WriteLine(DigitCounter.Execute(12345));
+            //OddNumberPrinter.Execute(20);
+            IsPrime.Execute(37, 37/2);
+            IsPalindrome.Execute("ABBA");
+            Console.WriteLine(
+                DigitMultiplier.Execute(8));
             //ForLoopProblem.Problem();
 
             char startPeg = 'A'; // start tower in output
@@ -145,11 +155,11 @@ namespace ADS
             //var intList = new ArrayList();
             //intList[1] as int? = 2;
 
-            var res12 = ArrayListCombiner.Merge(new ArrayList() {1, 2, 3, 4}, new ArrayList() {1, 2, 3, 4});
+            var res12 = ArrayListCombiner.Merge(new ArrayList() { 1, 2, 3, 4 }, new ArrayList() { 1, 2, 3, 4 });
 
-            int max = MaxRec.Execute(new int[]{1,2,3,4,1204});
+            int max = MaxRec.Execute(new int[] { 1, 2, 3, 4, 1204 });
 
-          
+
             Console.WriteLine();
 
             //Console.WriteLine(Converter.BinToDecimal("1011"));
