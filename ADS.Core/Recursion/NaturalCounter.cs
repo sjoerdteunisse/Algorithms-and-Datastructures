@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ADS.Core.Recusrion
+﻿namespace ADS.Core.Recursion
 {
     public class NaturalCounter
     {

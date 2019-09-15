@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ADS.Core.Recusrion
+﻿namespace ADS.Core.Recursion
 {
     public class DigitCounter
     {

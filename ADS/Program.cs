@@ -3,9 +3,8 @@ using ADS.Core.Lesson_2;
 using ADS.Core.Lesson_3;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
-using ADS.Core.Recusrion;
+using ADS.Core.Recursion;
 
 namespace ADS
 {

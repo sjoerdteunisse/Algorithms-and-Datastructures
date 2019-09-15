@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ADS.Core.Recusrion
+namespace ADS.Core.Recursion
 {
     public class Printer
     {
@@ -27,9 +25,8 @@ namespace ADS.Core.Recusrion
         {
             if (n == 0)
                 return;
-            else
-                Console.WriteLine(n);
 
+            Console.WriteLine(n);
             PrintDsc(n - 1);
         }
     }
