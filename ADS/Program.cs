@@ -21,7 +21,7 @@ namespace ADS
             IsPrime.Execute(37, 37/2);
             IsPalindrome.Execute("ABBA");
             Console.WriteLine(
-                DigitMultiplier.Execute(8));
+                FactorialCalculator.Execute(8));
             //ForLoopProblem.Problem();
 
             char startPeg = 'A'; // start tower in output

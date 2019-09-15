@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ADS.Core.Advanced
 {
-    class Location
+    public class Location
     {
         protected bool Equals(Location other)
         {
