@@ -1,10 +1,14 @@
 ﻿//using ADS.Core.Lesson_1;
 using ADS.Core.Lesson_2;
 using ADS.Core.Lesson_3;
+using ADS.Core.Recursion;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
-using ADS.Core.Recursion;
+using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using ADS.Core.Lesson_4;
 
 namespace ADS
 {
@@ -17,7 +21,7 @@ namespace ADS
             //DigitSeperator.Execute(255);
             //Console.WriteLine(DigitCounter.Execute(12345));
             //OddNumberPrinter.Execute(20);
-            IsPrime.Execute(37, 37/2);
+            IsPrime.Execute(37, 37 / 2);
             IsPalindrome.Execute("ABBA");
             Console.WriteLine(
                 FactorialCalculator.Execute(8));
@@ -28,6 +32,37 @@ namespace ADS
             char tempPeg = 'B'; // temporary tower in output
             int totalDisks = 1200; // number of disks
                                    //TowersOfHanoi.Solve(totalDisks, startPeg, endPeg, tempPeg);
+
+
+           int[,] random = new int[,]
+           {
+               {200, 400},
+               {2000, 4176},
+               {20000, 40000},
+               { 50000, 50000}
+           };
+
+            //var c = _2DArraySum.GetHighestSum(random);
+
+            var getHighestSummedArray = new _2DArraySumAsClass<int[,]>();
+            
+            Console.WriteLine("Highest value"  + getHighestSummedArray.GetHighestSum(random));
+
+
+            //Create linked list
+            LinkedListExercise linkedListExercise = new LinkedListExercise();
+            
+            //Add data
+            linkedListExercise.Employees.AddLast(new Employee("Bob", 5));
+            linkedListExercise.Employees.AddLast(new Employee("Alice", 5000));
+            
+            //ShallowCopy with IClonable
+            var shallowCopy = linkedListExercise.ShallowCopy();
+            //Shallow copy with Collection<T>() ctor
+            var shallowCopyCollection = linkedListExercise.ShallowCopyCollection();
+            //Deep copy
+            var deepCopy = linkedListExercise.DeepCopy();
+
 
             //var bucketSort = new BucketSort();
             //bucketSort.Execute(new[] { 8, 2, 122, 1, 99, 3, 4, 2 });
