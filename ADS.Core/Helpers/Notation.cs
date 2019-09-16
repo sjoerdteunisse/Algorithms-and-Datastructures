@@ -12,7 +12,7 @@
 
 
         //Best Average Worst
-        //    Quick Sort Ω(n log (n) ) Θ(n log(n) ) O(n2 )
+        //Quick Sort Ω(n log (n) ) Θ(n log(n) ) O(n2 )
         //Merge Sort Ω(n log (n) ) Θ(n log(n) ) O(n log(n) )
         //Timsort Ω(n ) Θ(n log(n) ) O(n log(n) )
         //Heap Sort Ω(n log (n) ) Θ(n log(n) ) O(n log(n) )
