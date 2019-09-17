@@ -9,7 +9,7 @@ namespace ADS.Core.Sorting
     /// </summary>
     public class Quick
     {
-        private static void Quick_Sort(int[] arr, int left, int right)
+        public static void Quick_Sort(int[] arr, int left, int right)
         {
             if (left >= right) return;
 

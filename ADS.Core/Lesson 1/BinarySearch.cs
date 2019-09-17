@@ -8,7 +8,7 @@
         /// <param name="array"></param>
         /// <param name="searchValue"></param>
         /// <returns></returns>
-        public int Execute(int[] array, int searchValue)
+        public static int Execute(int[] array, int searchValue)
         {
             //set min
             var min = 0;

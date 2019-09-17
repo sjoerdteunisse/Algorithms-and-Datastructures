@@ -1,27 +1,64 @@
-﻿namespace ADS.Core.Helpers
+﻿using System.Linq.Expressions;
+using ADS.Core.Lesson_1;
+using ADS.Core.Sorting;
+
+namespace ADS.Core.Helpers
 {
     public class Notation
     {
-        //Data Structure         Average cases                                 Worst cases
-        //Insert    Delete      Search      Insert  Delete  Search
+        
+        /// <summary>
+        /// O(1) O(log n) O(n) O(n log n) o(n^2) o(2^n) o(n!)
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+
+        //Data Structure         Average cases                      Worst cases
+        //                      Insert    Delete      Search        Insert  Delete  Search
         //Array/stack/queue     O(1)        O(1)        O(n)        O(1)    O(1)    O(n)
         //Linked list           O(1)        O(1)        O(n)        O(1)    O(1)    O(n)
         //Doubly linked list    O(1)        O(1)        O(n)        O(1)    O(1)    O(n)
         //Hash table            O(1)        O(1)        O(1)        O(n)    O(n)    O(n)
         //Binary search tree    O(log(n))   O(log(n))   O(log(n))   O(n)    O(n)    O(n)
 
+        //Logarithmic search: O(log n)
+        //memory O(1)
+        public int ExecuteBinarySearch(int[] array, int key)
+        {
+            return BinarySearch.Execute(array, key);
+        }
 
-        //Best Average Worst
+        //Best                      Average     Worst
         //Quick Sort Ω(n log (n) ) Θ(n log(n) ) O(n2 )
+        public void ExecuteQuicksort(int[] array, int left, int right)
+        {
+            Quick.Quick_Sort(array,left,right);
+        }
+
+        //Bucket Sort O(n+m) Θ(n+m) O(n2)
+        //Memory O(N)- buckets increase with N
+        //Where N is numbers and M is buckets
+        //TIME = O(n), if m<n if bucket count is smaller than number count
+        public void ExecuteBucketSort(int[] array)
+        {
+            BucketSort.Execute(array);
+        }
+
+        //Bubble Sort best: o(n) avg:Θ(n2 ) worst:O(n2 )
+        public void ExecuteBubbleSort(int[] array)
+        {
+            BubbleSort.Execute(array);
+        }
+
+
         //Merge Sort Ω(n log (n) ) Θ(n log(n) ) O(n log(n) )
         //Timsort Ω(n ) Θ(n log(n) ) O(n log(n) )
         //Heap Sort Ω(n log (n) ) Θ(n log(n) ) O(n log(n) )
-        //Bubble Sort Ω(n ) Θ(n2 ) O(n2 )
         //Insertion Sort Ω(n ) Θ(n2 ) O(n2 )
         //Selection Sort Ω(n2 ) Θ(n2 ) O(n2 )
         //Tree Sort Ω(n log (n) ) Θ(n log(n) ) O(n2 )
         //Shell Sort Ω(n log (n) ) Θ(n (log(n) )2) O(n (log(n) )2)
-        //Bucket Sort Ω(n+k ) Θ(n+k ) O(n2 )
         //Radix Sort Ω(nk ) Θ(nk ) O(nk )
         //Counting Sort Ω(n+k ) Θ(n+k ) O(n+k )
         //Cubesort Ω(n ) Θ(n log(n) ) O(n log(n) )

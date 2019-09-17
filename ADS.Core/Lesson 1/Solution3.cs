@@ -40,6 +40,7 @@ namespace ADS.Core.Lesson_1
                 double exponential = 0; //Space is o(1)
                 for (var i = 0; i < 50; i++)  //I Space is O(1)
                     exponential += Math.Pow(65536, 256); //Space is O(1) – Max Int size.
+
                 for (var i = 0; i < length; i++) // Space is O(1)
                     sum += exponential; //Space is O(1)
 

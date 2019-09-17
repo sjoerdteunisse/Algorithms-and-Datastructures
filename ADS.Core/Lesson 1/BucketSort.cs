@@ -10,7 +10,7 @@ namespace ADS.Core.Lesson_1
         //Create N Buckets for X size of elements where X is the largest amount; 
         //given X is has X elements contained, ensure X amount of buckets are created;
         //Foreach bucket, representing an array of integers.
-        public int[] Execute(int[] array)
+        public static int[] Execute(int[] array)
         {
             //Set smallest and largest to the 0th position in the array
             var largest = array[0];

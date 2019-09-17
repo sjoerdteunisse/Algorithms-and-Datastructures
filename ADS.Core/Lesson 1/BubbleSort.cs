@@ -3,7 +3,7 @@
     public class BubbleSort
     {
         //Bubble Sort Best:Ω(n) avg:Θ(n^2)  worst:O(n^2)  space: O(1)
-        public int[] Execute(int[] array)
+        public static int[] Execute(int[] array)
         {
             for (var i = 0; i < array.Length -1; i++) //Loop N times of the size of the elements
             {
