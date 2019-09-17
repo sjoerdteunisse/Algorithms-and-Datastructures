@@ -4,7 +4,7 @@
     {
         /// <summary>
         /// O(n) memory
-        /// o(n) speed - length of number;
+        /// O(log10(n)) time - length of number;
         /// </summary>
         /// <param name="n">Digits</param>
         /// <param name="count">hidden parameter for counting</param>
