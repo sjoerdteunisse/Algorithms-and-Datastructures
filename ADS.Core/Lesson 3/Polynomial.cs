@@ -95,7 +95,7 @@ namespace ADS.Core.Lesson_3
         public Polynomial OptimizedAlgorithm(Polynomial poly2)
         {
             var sumOfPolynomial = new Polynomial();
-            int ct = poly2._terms.Count + _terms.Count;
+            var ct = poly2._terms.Count + _terms.Count;
 
             for (var i = 0; i < ct; i++)
             {

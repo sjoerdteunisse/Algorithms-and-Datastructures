@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS", "ADS\ADS.csproj", "{307580F7-7434-4385-9280-BF81E42E92BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS.Core", "ADS.Core\ADS.Core.csproj", "{ABBB077A-D9A7-48B9-B026-FAF76A6B4427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADS.Core", "ADS.Core\ADS.Core.csproj", "{ABBB077A-D9A7-48B9-B026-FAF76A6B4427}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS.Test", "ADS.Test\ADS.Test.csproj", "{F8348D84-AB76-4F29-A8FC-AB97E4DB6A22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ABBB077A-D9A7-48B9-B026-FAF76A6B4427}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABBB077A-D9A7-48B9-B026-FAF76A6B4427}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABBB077A-D9A7-48B9-B026-FAF76A6B4427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8348D84-AB76-4F29-A8FC-AB97E4DB6A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8348D84-AB76-4F29-A8FC-AB97E4DB6A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8348D84-AB76-4F29-A8FC-AB97E4DB6A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8348D84-AB76-4F29-A8FC-AB97E4DB6A22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

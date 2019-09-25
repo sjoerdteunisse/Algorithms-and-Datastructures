@@ -4,7 +4,6 @@ namespace ADS.Core.Recursion
 {
     public class IsPalindrome
     {
-
         public static void Execute(string input)
         {
             if (input.Length <= 1)

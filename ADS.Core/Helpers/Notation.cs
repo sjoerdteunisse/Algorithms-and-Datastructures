@@ -36,16 +36,17 @@ namespace ADS.Core.Helpers
             Quick.Quick_Sort(array,left,right);
         }
 
-        //Bucket Sort O(n+m) Θ(n+m) O(n2)
-        //Memory O(N)- buckets increase with N
+        //Bucket Sort best: O(n+m) avg: Θ(n+m) worst:O(n2)
         //Where N is numbers and M is buckets
         //TIME = O(n), if m<n if bucket count is smaller than number count
+        //Memory O(N)- buckets increase with N Or The space complexity for Bucket Sort is O(n+k) if buckets +numbers are added as sublist of a bucket
         public void ExecuteBucketSort(int[] array)
         {
             BucketSort.Execute(array);
         }
 
-        //Bubble Sort best: o(n) avg:Θ(n2 ) worst:O(n2 )
+        //Bubble Sort best: o(n) avg:Θ(n2) worst:O(n2 )
+        //o1 memory
         public void ExecuteBubbleSort(int[] array)
         {
             BubbleSort.Execute(array);

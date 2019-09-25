@@ -4,7 +4,9 @@ namespace ADS.Core.Recursion
 {
     public class OddNumberPrinter
     {
-        public static void Execute(int tillN)
+
+        //Even 2.4
+        public static void ExecuteEven(int tillN)
         {
             if (tillN == 0)
                 return;
@@ -12,10 +14,10 @@ namespace ADS.Core.Recursion
             if (tillN % 2 == 0)
                 Console.WriteLine(tillN);
 
-            Execute(tillN - 1);
+            ExecuteEven(tillN - 1);
         }
 
-        public static void EvenExecute(int tillN)
+        public static void ExecuteOdd(int tillN)
         {
             if (tillN == 0)
                 return;
@@ -23,7 +25,7 @@ namespace ADS.Core.Recursion
             if (tillN % 2 == 1)
                 Console.WriteLine(tillN);
 
-            Execute(tillN - 1);
+            ExecuteOdd(tillN - 1);
         }
     }
 }

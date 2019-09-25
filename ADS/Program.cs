@@ -8,7 +8,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using ADS.Core.Lesson_1;
+using ADS.Core.Lesson_9;
 using ADS.Core.Lesson_4;
+using ADS.Core.Lesson_5;
 
 namespace ADS
 {
@@ -16,11 +19,58 @@ namespace ADS
     {
         static void Main(string[] args)
         {
+            string[] strings = {
+                "(){}",
+                ")"};
+
+            foreach (var s in strings)
+            {
+                string results = BracketDelimiter.IsBalanced(s) ? "succes" : "niet oké";
+                Debug.WriteLine(results);
+            }
+
+            var resultTot = PostfixCalculator.Calculate("12 10-2+25*10/");
+            Console.WriteLine(resultTot);
+
+            //BracketDelimiter.IsBalanced("(){}");
+
+            //BracketDelimiter.IsBalanced("()");
+            //BracketDelimiter.IsBalanced("((");
+
+            //BracketDelimiter.IsBalanced("{()}");
+            //BracketDelimiter.IsBalanced("{()");
+            //BracketDelimiter.IsBalanced("''");
+
+            ////var resultS =  BracketDelimiter.IsBalanced("<?<??>?>");
+            //var resultSS = BracketDelimiter.IsBalanced("for(int i = 0; i< 100; i++){}");
+
+            //Console.WriteLine(resultSS);
+            Console.ReadLine();
+            return;
+
+
+            OddNumberPrinter.ExecuteEven(2);
+            OddNumberPrinter.ExecuteOdd(3);
+
+           
+
+
+            var result = InterestCalculator.Calculate(2, 1, 5000);
+
+            List<string> items = new List<string> { "a", "b", "c", "d", "e", "f", "g" };
+            Permutation.Permutations(items);
+            Console.WriteLine(Permutation.GetPermutationCount);
+
             //Printer.PrintAsc();
             //Console.WriteLine(NaturalCounter.Execute(5));
             //DigitSeperator.Execute(255);
             //Console.WriteLine(DigitCounter.Execute(12345));
             //OddNumberPrinter.Execute(20);
+            ItterativeIndex ittIdIndex = new ItterativeIndex();
+
+            int value = ittIdIndex.IndexOf(new int[] {1, 2, 3, 4, 5}, 5, 0);
+
+
             IsPrime.Execute(37, 37 / 2);
             IsPalindrome.Execute("ABBA");
             Console.WriteLine(
